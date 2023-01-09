@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:black ;
+    }
+    #box{
+        width:900px;
+        height: 300px;
+         margin: 50px auto;
+    }
+    .a{
+           height: 250px;
+           width: 250px;
+           background-color:white;
+           float: left;
+           margin: 25px;
+           border: 30px groove red;
+           box-sizing: border-box;
+           border-radius: 10px ;
+           box-shadow: 0px 0px 10px 10px black inset;
+           font-size: 80px;
+           text-align: center;
+           line-height: 190px;
+           color: red;
+           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    h1{
+        color:red;
+        text-align: center;
+        font-size: 70px;
+    }
+</style>
+<body onload="demo()">
+    <h1>DIGITAL CLOCK</h1>
+    <div id="box" >
+        <div id="h" class="a">hh</div>
+        <div  id="m"class="a">mm</div>
+        <div id="s"class="a">ss</div>
+    </div>
+    <script>
+        function demo(){
+        var d= new Date();
+        var hh=document.getElementById("h")
+        var mm=document.getElementById("m")
+        var ss=document.getElementById("s")
+        hh.innerText=d.getHours();
+        mm.innerText=d.getMinutes();
+        ss.innerText=d.getSeconds();
+        
+        }
+       window.setInterval(demo,1000);
+    </script>
+</body>
+</html>
